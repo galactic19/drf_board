@@ -65,6 +65,7 @@ wsgi.py
 asgi.py
 __init__.
 manage.py
+media/
 
 
 # Flask stuff:

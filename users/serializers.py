@@ -6,6 +6,8 @@ from rest_framework import serializers
 from rest_framework.authtoken.models import Token   # Token 모델
 from rest_framework.validators import UniqueValidator   # 이메일 중복 방지를 위한 검증도구
 
+from .models import Profile
+
 
 class RegisterSerializer(serializers.ModelSerializer):
     '''
@@ -74,3 +76,10 @@ class LoginSerialzer(serializers.Serializer):
         raise serializers.ValidationError(
             {"error" : "로그인을 할 수 없습니다."}
         )
+        
+        
+class ProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Profile
+        fields = ('nickname', 'position', 'subjects', 'image')
+        
