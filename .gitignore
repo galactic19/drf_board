@@ -60,6 +60,12 @@ coverage.xml
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+settings.py
+wsgi.py
+asgi.py
+__init__.
+manage.py
+
 
 # Flask stuff:
 instance/
